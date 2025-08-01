@@ -7,6 +7,7 @@ import com.bannrx.campaignService.apis.DeleteCampaignApi;
 import com.bannrx.campaignService.apis.FetchCampaignApi;
 import com.bannrx.campaignService.apis.UpdateCampaignApi;
 import lombok.RequiredArgsConstructor;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 import rklab.utility.annotations.Loggable;
 import rklab.utility.dto.ApiOutput;
@@ -18,6 +19,7 @@ import rklab.utility.expectations.ServerException;
 @RequiredArgsConstructor
 @RestController
 @RequestMapping("v1/api/campaign")
+@PreAuthorize("hasAnyRole('ADMIN','CAMPAIGNER')")
 public class CampaignController {
     private final AddCampaignApi addCampaignApi;
     private final UpdateCampaignApi updateCampaignApi;
