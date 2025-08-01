@@ -5,7 +5,7 @@ plugins {
 }
 
 group = "com.bannrx"
-version = "campaign-service-0.0.1-SNAPSHOT"
+version = "campaign-service-0.0.2-SNAPSHOT"
 
 java {
 	toolchain {
@@ -25,10 +25,10 @@ repositories {
 	if (env != "local"){
 		val user: String? = project.findProperty("username") as String? ?: System.getenv("GITHUB_USERNAME")
 		val token: String? = project.findProperty("token") as String? ?: System.getenv("GITHUB_TOKEN")
-		val repo = "campaign-service"
+		val repo = "bannrx-common"
 		val gitUrl = "https://maven.pkg.github.com/${user}/${repo}"
 		maven {
-			name = "common-service-package"
+			name = "bannrx-common-package"
 			url = uri(gitUrl)
 			credentials {
 				username = user
@@ -71,7 +71,7 @@ dependencies {
 		}
 		implementation(project(":utility"))
 	} else {
-		implementation("com.bannrx:bannrx-common:common-0.0.9-SNAPSHOT"){
+		implementation("com.bannrx:bannrx-common:common-0.1.0-SNAPSHOT"){
 			exclude(group="com.rklab", module="utility")
 		}
 		implementation("com.rklab:utility:utility-0.0.6-SNAPSHOT")
