@@ -3,7 +3,7 @@ package com.bannrx.campaignService.apis;
 import com.bannrx.common.dtos.DocumentDto;
 import com.bannrx.common.dtos.SecurityUserDto;
 import com.bannrx.common.dtos.requests.DocumentUploadRequest;
-import com.bannrx.common.service.DocumentService;
+import com.bannrx.campaignService.services.DocumentService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
