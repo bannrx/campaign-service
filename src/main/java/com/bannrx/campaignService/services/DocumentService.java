@@ -75,9 +75,8 @@ public class DocumentService {
         var uploadRequest = AwsUploadRequest.awsUploadRequestBuilder()
                 .config(properties)
                 .key(key)
-                .inputStream(file.getInputStream())
+                .content(file.getBytes())
                 .contentType(documentDto.getMimeType())
-                .contentLength(file.getSize())
                 .build();
         return awsService.upload(uploadRequest);
     }
