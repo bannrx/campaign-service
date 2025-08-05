@@ -1,6 +1,6 @@
 package com.bannrx.campaignService.configuration;
 
-import com.bannrx.common.dtos.configuration.AwsProperties;
+import com.bannrx.campaignService.dto.configuration.AwsProperties;
 import com.bannrx.common.service.SystemConfigService;
 import com.fasterxml.jackson.core.JsonParseException;
 import jakarta.annotation.PostConstruct;
