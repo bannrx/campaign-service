@@ -13,4 +13,10 @@ spring:
       ddl-auto: update
     database: MYSQL
 
+  servlet:
+    multipart:
+      max-file-size: 100MB
+      max-request-size: 102MB
+
+
 
