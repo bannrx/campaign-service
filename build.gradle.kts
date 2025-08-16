@@ -71,10 +71,10 @@ dependencies {
 		}
 		implementation(project(":utility"))
 	} else {
-		implementation("com.bannrx:bannrx-common:common-0.1.1-SNAPSHOT"){
+		implementation("com.bannrx:bannrx-common:common-0.1.2-SNAPSHOT"){
 			exclude(group="com.rklab", module="utility")
 		}
-		implementation("com.rklab:utility:utility-0.0.7-SNAPSHOT")
+		implementation("com.rklab:utility:utility-0.0.8-SNAPSHOT")
 	}
 	implementation("org.springframework.boot:spring-boot-starter-security:3.1.0")
 	implementation("org.springframework.security:spring-security-config:6.0.0")
